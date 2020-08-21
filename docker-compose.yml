@@ -4,6 +4,7 @@ services:
   mongo:
     container_name: mongo_latest__compose
     image: mongo:latest
+    restart: always
     ports:
       - 27017:27017
     networks:
@@ -11,6 +12,7 @@ services:
   redis:
     container_name: redis_alpine__compose
     image: redis:alpine
+    restart: always
     ports:
       - 6379:6379
     networks:
@@ -18,6 +20,7 @@ services:
   learning_docker:
     container_name: learning-docker_golang-container__compose
     image: learning-docker:golang-container
+    restart: always
     ports:
       - 8080:8080
     networks:
